@@ -117,7 +117,7 @@ def detect(source):
 			data_set = {"Object": classSend, "Count": countSend}
 			MQTT_MSG = json.dumps(data_set)
 			client.publish(MQTT_TOPIC, MQTT_MSG)
-			print('%sDone. (%.3fs)' % (s, t2 - t1))
+			print('%sDone. (%.3fs) here' % (s, t2 - t1))
 			del classSend[:]
 			del countSend[:]
 			im0 = cv2.resize(im0,(800,600))

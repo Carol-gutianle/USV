@@ -10,6 +10,7 @@ from utils.datasets import *
 from utils.utils import *
 
 
+
 class Camera(BaseCamera):
     video_source = 'test.mp4'
 
@@ -24,6 +25,9 @@ class Camera(BaseCamera):
 
     @staticmethod
     def frames():
+        #define Conifig
+        counter = 0
+        frequency = 10
         out, weights, imgsz = \
         'inference/output', 'weights/yolov5s.pt', 640
         source = 'test.mp4'
@@ -94,6 +98,7 @@ class Camera(BaseCamera):
                 save_path = str(Path(out) / Path(p).name)
                 s += '%gx%g ' % img.shape[2:]  # print string
                 gn = torch.tensor(im0.shape)[[1, 0, 1, 0]]  #  normalization gain whwh
+                counter = counter + 1
                 if det is not None and len(det):
                     # Rescale boxes from img_size to im0 size
                     det[:, :4] = scale_coords(img.shape[2:], det[:, :4], im0.shape).round()
@@ -102,10 +107,13 @@ class Camera(BaseCamera):
                     for c in det[:, -1].detach().unique():
                         n = (det[:, -1] == c).sum()  # detections per class
                         s += '%g %s, ' % (n, names[int(c)])  # add to string
-                        
+                    #Draw boxes    
                     for *xyxy, conf, cls in det:
                         label = '%s %.2f' % (names[int(cls)], conf)
                         plot_one_box(xyxy, im0, label=label, color=colors[int(cls)], line_thickness=3)
-                print('%sDone. (%.3fs)' % (s, t2 - t1))
+                if(counter % frequency ==0):
+                    print('%sDone. (%.3fs) Counter: %d' % (s, t2 - t1,counter))
+                else:
+                    s = ''
  
             yield cv2.imencode('.jpg', im0)[1].tobytes()
