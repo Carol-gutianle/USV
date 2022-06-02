@@ -12,7 +12,7 @@ from utils.utils import *
 
 
 class Camera(BaseCamera):
-    video_source = 'test.mp4'
+    video_source = 'ship.mp4'
 
     def __init__(self):
         if os.environ.get('OPENCV_CAMERA_SOURCE'):
@@ -30,7 +30,7 @@ class Camera(BaseCamera):
         frequency = 10
         out, weights, imgsz = \
         'inference/output', 'weights/yolov5s.pt', 640
-        source = 'test.mp4'
+        source = 'ship.mp4'
         # source = 0
         device = torch_utils.select_device()
         if os.path.exists(out):
@@ -102,7 +102,6 @@ class Camera(BaseCamera):
                 if det is not None and len(det):
                     # Rescale boxes from img_size to im0 size
                     det[:, :4] = scale_coords(img.shape[2:], det[:, :4], im0.shape).round()
-                    
                     #for c in det[:, -1].unique():  #probably error with torch 1.5
                     for c in det[:, -1].detach().unique():
                         n = (det[:, -1] == c).sum()  # detections per class
@@ -110,6 +109,7 @@ class Camera(BaseCamera):
                     #Draw boxes    
                     for *xyxy, conf, cls in det:
                         label = '%s %.2f' % (names[int(cls)], conf)
+                        print(label)
                         plot_one_box(xyxy, im0, label=label, color=colors[int(cls)], line_thickness=3)
                 if(counter % frequency ==0):
                     print('%sDone. (%.3fs) Counter: %d' % (s, t2 - t1,counter))

@@ -848,7 +848,7 @@ def plot_one_box(x, img, color=None, label=None, line_thickness=None):
 	c1, c2 = (int(x[0]), int(x[1])), (int(x[2]), int(x[3]))
 
 	#filter classes below
-	listDet = ['person','bicycle','car','motorbike','bus','truck','bird','cat','dog','horse','cow','backpack','umbrella','handbag','kite','cell phone']
+	listDet = ['boat','person','bicycle','car','motorbike','bus','truck','bird','cat','dog','horse','cow','backpack','umbrella','handbag','kite','cell phone']
 	#print('curr : ' + str(label))
 
 	label1 = label.split(' ')
