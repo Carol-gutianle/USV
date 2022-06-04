@@ -99,33 +99,35 @@ class Camera(BaseCamera):
                 pred = apply_classifier(pred, modelc, img, im0s)
 
             for i, det in enumerate(pred):  # detections per image
+                targetFlg = False
                 p, s, im0 = path, '', im0s
 
                 save_path = str(Path(out) / Path(p).name)
                 s += '%gx%g ' % img.shape[2:]  # print string
                 gn = torch.tensor(im0.shape)[[1, 0, 1, 0]]  #  normalization gain whwh
-                counter = counter + 1
                 if det is not None and len(det):
+                    targetFlg = True
                     # Rescale boxes from img_size to im0 size
                     det[:, :4] = scale_coords(img.shape[2:], det[:, :4], im0.shape).round()
                     #for c in det[:, -1].unique():  #probably error with torch 1.5
                     for c in det[:, -1].detach().unique():
                         n = (det[:, -1] == c).sum()  # detections per class
                         s += '%g %s, ' % (n, names[int(c)])  # add to string
-                        cateDict[names[int(c)]][1] = n
+                        cateDict[names[int(c)]][1] = '%g'%n
+                    #print(cateDict)
                     cateFlag = False
                     for key in cateDict:
-                        if cateDict[key][0]!= cateDict[key][1]:
-                            cateDict[key][0] = cateDict[key][1]
+                        if int(cateDict[key][0]) < int(cateDict[key][1]):
                             cateFlag = True
+                        cateDict[key][0] = cateDict[key][1]
                     #Draw boxes    
                     for *xyxy, conf, cls in det:
                         label = '%s %.2f' % (names[int(cls)], conf)
                         plot_one_box(xyxy, im0, label=label, color=colors[int(cls)], line_thickness=3)
-                if(counter % frequency == 0) & cateFlag:
+                #if(counter % frequency == 0) and cateFlag:
+                if cateFlag and targetFlg:
                     cv2.imwrite("./capture_image/"+str(counter)+'.jpg',im0)
-                    print('%sDone. (%.3fs) Counter: %d' % (s, t2 - t1,counter))
-                else:
-                    s = ''
+                    print('%s Done. (%.3fs) Counter: %d' % (s, t2 - t1,counter))
+                counter += 1
  
             yield cv2.imencode('.jpg', im0)[1].tobytes()
