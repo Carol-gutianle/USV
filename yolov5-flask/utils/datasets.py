@@ -90,6 +90,8 @@ class LoadImages:  # for inference
         ni, nv = len(images), len(videos)
 
         self.img_size = img_size
+        self.ret_val = True
+        self.img0 = []
         self.files = images + videos
         self.nf = ni + nv  # number of files
         self.video_flag = [False] * ni + [True] * nv
@@ -109,11 +111,18 @@ class LoadImages:  # for inference
         if self.count == self.nf:
             raise StopIteration
         path = self.files[self.count]
-
+        
         if self.video_flag[self.count]:
             # Read video
             self.mode = 'video'
-            ret_val, img0 = self.cap.read()
+            if self.validCounter % 10 == 0:
+                ret_val, img0 = self.cap.read()
+                self.ret_val = ret_val
+                self.img0 = img0
+                print(self.validCounter)
+            else:
+                img0 = self.img0
+                ret_val = self.ret_val
             if not ret_val:
                 self.count += 1
                 self.cap.release()
@@ -123,9 +132,9 @@ class LoadImages:  # for inference
                     path = self.files[self.count]
                     self.new_video(path)
                     ret_val, img0 = self.cap.read()
-
             self.frame += 1
-           #print('video %g/%g (%g/%g) %s: ' % (self.count + 1, self.nf, self.frame, self.nframes, path), end='')
+            self.validCounter += 1
+            #print('video %g/%g (%g/%g) %s: ' % (self.count + 1, self.nf, self.frame, self.nframes, path), end='')
 
         else:
             # Read image
@@ -145,6 +154,7 @@ class LoadImages:  # for inference
         return path, img, img0, self.cap
 
     def new_video(self, path):
+        self.validCounter = 0
         self.frame = 0
         self.cap = cv2.VideoCapture(path)
         self.nframes = int(self.cap.get(cv2.CAP_PROP_FRAME_COUNT))

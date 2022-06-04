@@ -72,7 +72,12 @@ class Camera(BaseCamera):
         t0 = time.time()
         img = torch.zeros((1, 3, imgsz, imgsz), device=device)  # init img
         _ = model(img.half() if half else img) if device.type != 'cpu' else None  # run once
+        #frameCounter = 0
         for path, img, im0s, vid_cap in dataset:
+            #frameCounter += 1
+            #if frameCounter % 10 != 0:
+              #  continue
+            #print("frameCounter %d",frameCounter)
             img = torch.from_numpy(img).to(device)
             img = img.half() if half else img.float()  # uint8 to fp16/32
             img /= 255.0  # 0 - 255 to 0.0 - 1.0
@@ -109,6 +114,7 @@ class Camera(BaseCamera):
                     #Draw boxes    
                     for *xyxy, conf, cls in det:
                         label = '%s %.2f' % (names[int(cls)], conf)
+                        print(label)
                         plot_one_box(xyxy, im0, label=label, color=colors[int(cls)], line_thickness=3)
                 if(counter % frequency ==0):
                     print('%sDone. (%.3fs) Counter: %d' % (s, t2 - t1,counter))
