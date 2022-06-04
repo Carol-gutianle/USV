@@ -99,9 +99,6 @@ def detect(save_img=False):
             gn = torch.tensor(im0.shape)[[1, 0, 1, 0]]  # normalization gain whwh
             if det is not None and len(det):
 
-                # Counter + 1
-                counter += 1
-
                 # Rescale boxes from img_size to im0 size
                 det[:, :4] = scale_coords(img.shape[2:], det[:, :4], im0.shape).round()
 
@@ -122,8 +119,7 @@ def detect(save_img=False):
                         plot_one_box(xyxy, im0, label=label, color=colors[int(cls)], line_thickness=3)
 
             # Print time (inference + NMS)
-            if counter % frequency != 0:
-                print('%sDone. (%.3fs).%d' % (s, t2 - t1, counter))
+            print('%sDone. (%.3fs).' % (s, t2 - t1))
 
             # Stream results
             if view_img:

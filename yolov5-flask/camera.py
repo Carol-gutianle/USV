@@ -29,7 +29,7 @@ class Camera(BaseCamera):
         counter = 0
         frequency = 10
         out, weights, imgsz = \
-        'inference/output', 'weights/yolov5s.pt', 640
+        'inference/output', 'runs/exp15/weights/best.pt', 640
         source = 'ship.mp4'
         # source = 0
         device = torch_utils.select_device()
@@ -109,7 +109,6 @@ class Camera(BaseCamera):
                     #Draw boxes    
                     for *xyxy, conf, cls in det:
                         label = '%s %.2f' % (names[int(cls)], conf)
-                        print(label)
                         plot_one_box(xyxy, im0, label=label, color=colors[int(cls)], line_thickness=3)
                 if(counter % frequency ==0):
                     print('%sDone. (%.3fs) Counter: %d' % (s, t2 - t1,counter))
