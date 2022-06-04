@@ -119,7 +119,7 @@ class LoadImages:  # for inference
                 ret_val, img0 = self.cap.read()
                 self.ret_val = ret_val
                 self.img0 = img0
-                print(self.validCounter)
+               # print(self.validCounter)
             else:
                 img0 = self.img0
                 ret_val = self.ret_val

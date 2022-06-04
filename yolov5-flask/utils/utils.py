@@ -848,11 +848,10 @@ def plot_one_box(x, img, color=None, label=None, line_thickness=None):
 	c1, c2 = (int(x[0]), int(x[1])), (int(x[2]), int(x[3]))
 
 	#filter classes below
-	listDet = ['ore carrier','general cargo ship','bulk cargo carrier','container ship','fishing boat','passenger ship','doll']
+	listDet = ['ore','general','bulk','container','fishing','passenger','doll']
 	#print('curr : ' + str(label))
 
 	label1 = label.split(' ')
-        print(label1[0] in listDet)
 	
 	if label1[0] in listDet:
 		cv2.rectangle(img, c1, c2, color, thickness=tl, lineType=cv2.LINE_AA)
