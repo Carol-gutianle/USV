@@ -64,7 +64,8 @@ class Camera(BaseCamera):
 
         # Set Dataloader
         vid_path, vid_writer = None, None
-        dataset = LoadImages(source, img_size=imgsz)
+        # dataset = LoadImages(source, img_size=imgsz)
+        dataset = LoadWebcam(0)
         #dataset = LoadStreams(source, img_size=imgsz)
         names = model.names if hasattr(model, 'names') else model.modules.names
         colors = [[random.randint(0, 255) for _ in range(3)] for _ in range(len(names))]
@@ -97,7 +98,7 @@ class Camera(BaseCamera):
             # Apply Classifier
             if classify:
                 pred = apply_classifier(pred, modelc, img, im0s)
-
+            cateFlag = False
             for i, det in enumerate(pred):  # detections per image
                 targetFlg = False
                 p, s, im0 = path, '', im0s
