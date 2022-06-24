@@ -36,7 +36,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
 
-    <VideoView
+    <WebView
         android:layout_width="400dp"
         android:layout_height="255dp"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -18,7 +18,7 @@
             app:layout_constraintEnd_toEndOf="parent" />
 
 
-        <VideoView
+        <WebView
             android:layout_width="400dp"
             android:layout_height="255dp"
             app:layout_constraintBottom_toBottomOf="parent"
