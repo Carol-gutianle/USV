@@ -1,9 +1,18 @@
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>	  
     <title>Flask YOLOv5</title>
+    <style type="text/css">
+	content {
+		height: auto;
+		width: auto\9;
+		width: 100%;
+	}
+    </style>
   </head>
   <body>
-    <h1>Flask YOLOv5</h1>
-    <img src="{{ url_for('video_feed') }}">
+    <div class="content">
+    <img src="{{ url_for('video_feed') }}" style="width: 100%; height:100%">
+    </div>
   </body>
 </html>
