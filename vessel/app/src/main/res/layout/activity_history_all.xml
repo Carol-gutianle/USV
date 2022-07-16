@@ -8,118 +8,9 @@
     android:background="@drawable/background"
     >
 
-    <ImageButton
-        android:id="@+id/hiistory1"
-        android:layout_width="150dp"
-        android:layout_height="83dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/example_1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.061"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.695" />
-
-    <TextView
-        android:layout_width="200dp"
-        android:layout_height="61dp"
-        android:gravity="center"
-        android:text="example:10bote"
-        android:textColor="@color/co"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.658"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.291" />
 
     <ImageButton
-        android:id="@+id/history2"
-        android:layout_width="150dp"
-        android:layout_height="83dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/example_1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.061"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <TextView
-        android:layout_width="200dp"
-        android:layout_height="61dp"
-        android:gravity="center"
-        android:text="example:10bote"
-        android:textColor="@color/co"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.625"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.128" />
-
-    <ImageButton
-        android:id="@+id/history3"
-        android:layout_width="150dp"
-        android:layout_height="83dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/example_1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.061"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.132" />
-
-
-    <TextView
-        android:layout_width="200dp"
-        android:layout_height="61dp"
-        android:gravity="center"
-        android:text="example:10bote"
-        android:textColor="@color/co"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.658"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.673" />
-
-    <ImageButton
-        android:id="@+id/history4"
-        android:layout_width="150dp"
-        android:layout_height="83dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/example_1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.061"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3" />
-
-
-    <TextView
-        android:layout_width="200dp"
-        android:layout_height="61dp"
-        android:gravity="center"
-        android:text="example:10bote"
-        android:textColor="@color/co"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.658"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.483" />
-
-    <ImageButton
-        android:id="@+id/imageButton1"
+        android:id="@+id/video_button"
         android:layout_width="200dp"
         android:layout_height="83dp"
         android:scaleType="centerInside"
@@ -134,7 +25,7 @@
 
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/history_button"
         android:layout_width="200dp"
         android:layout_height="83dp"
         android:scaleType="centerInside"
@@ -145,6 +36,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
+
+    <ListView
+        android:id="@+id/lv_expense"
+        android:layout_width="409dp"
+        android:layout_height="646dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
