@@ -15,7 +15,7 @@ public class ShowVideo extends AppCompatActivity implements View.OnClickListener
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         //去掉标题栏
-        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
+        supportRequestWibaawndowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video);
         // 实例化组件

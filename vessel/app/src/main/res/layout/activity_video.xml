@@ -36,6 +36,19 @@
         app:layout_constraintVertical_bias="1.0" />
 
 
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="222dp"
+        android:layout_height="43dp"
+        android:background="@drawable/bg_username"
+        android:text="查看船舶信息"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.523" />
+
     <WebView
         android:id="@+id/shipVideo"
         android:layout_width="400dp"
@@ -45,8 +58,46 @@
         app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.443" />
+        app:layout_constraintVertical_bias="0.18" />
 
+
+    <ImageButton
+        android:id="@+id/leftdirection_button"
+        android:layout_width="87dp"
+        android:layout_height="70dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/left"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.243"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.798" />
+
+    <ImageButton
+        android:id="@+id/updirection_button"
+        android:layout_width="87dp"
+        android:layout_height="70dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/up"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.664" />
+
+    <ImageButton
+        android:id="@+id/rightdirection_button"
+        android:layout_width="87dp"
+        android:layout_height="70dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.768"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.798" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
