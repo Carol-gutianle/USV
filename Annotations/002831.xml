@@ -1,0 +1,58 @@
+<annotation>
+	<folder>JPEGImages</folder>
+	<filename>002831.jpg</filename>
+	<path>VOC2007/JPEGImages/002831.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>fishing boat</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<bndbox>
+			<xmin>1691</xmin>
+			<ymin>488</ymin>
+			<xmax>1920</xmax>
+			<ymax>552</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>fishing boat</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<bndbox>
+			<xmin>1708</xmin>
+			<ymin>424</ymin>
+			<xmax>1920</xmax>
+			<ymax>505</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>fishing boat</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>1076</xmin>
+			<ymin>476</ymin>
+			<xmax>1402</xmax>
+			<ymax>561</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>fishing boat</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>684</xmin>
+			<ymin>341</ymin>
+			<xmax>1233</xmax>
+			<ymax>524</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,36 @@
+<annotation>
+	<folder>JPEGImages</folder>
+	<filename>002503.jpg</filename>
+	<path>VOC2007/JPEGImages/002503.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>passenger ship</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>876</xmin>
+			<ymin>290</ymin>
+			<xmax>1655</xmax>
+			<ymax>535</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>fishing boat</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>1504</xmin>
+			<ymin>395</ymin>
+			<xmax>1848</xmax>
+			<ymax>501</ymax>
+		</bndbox>
+	</object>
+</annotation>

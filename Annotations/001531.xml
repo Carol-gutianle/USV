@@ -1,0 +1,47 @@
+<annotation>
+	<folder>JPEGImages</folder>
+	<filename>001531.jpg</filename>
+	<path>VOC2007/JPEGImages/001531.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>general cargo ship</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>506</xmin>
+			<ymin>363</ymin>
+			<xmax>1249</xmax>
+			<ymax>531</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>bulk cargo carrier</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>1251</xmin>
+			<ymin>465</ymin>
+			<xmax>1580</xmax>
+			<ymax>537</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>bulk cargo carrier</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<bndbox>
+			<xmin>1755</xmin>
+			<ymin>459</ymin>
+			<xmax>1920</xmax>
+			<ymax>544</ymax>
+		</bndbox>
+	</object>
+</annotation>

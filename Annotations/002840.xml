@@ -1,0 +1,47 @@
+<annotation>
+	<folder>JPEGImages</folder>
+	<filename>002840.jpg</filename>
+	<path>VOC2007/JPEGImages/002840.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>fishing boat</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<bndbox>
+			<xmin>1502</xmin>
+			<ymin>402</ymin>
+			<xmax>1920</xmax>
+			<ymax>490</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>fishing boat</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>514</xmin>
+			<ymin>378</ymin>
+			<xmax>1097</xmax>
+			<ymax>505</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>bulk cargo carrier</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<bndbox>
+			<xmin>1</xmin>
+			<ymin>328</ymin>
+			<xmax>687</xmax>
+			<ymax>482</ymax>
+		</bndbox>
+	</object>
+</annotation>

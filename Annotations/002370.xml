@@ -1,0 +1,47 @@
+<annotation>
+	<folder>JPEGImages</folder>
+	<filename>002370.jpg</filename>
+	<path>VOC2007/JPEGImages/002370.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>ore carrier</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<bndbox>
+			<xmin>1</xmin>
+			<ymin>369</ymin>
+			<xmax>662</xmax>
+			<ymax>550</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>ore carrier</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<bndbox>
+			<xmin>1488</xmin>
+			<ymin>430</ymin>
+			<xmax>1920</xmax>
+			<ymax>543</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>ore carrier</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<bndbox>
+			<xmin>1359</xmin>
+			<ymin>362</ymin>
+			<xmax>1920</xmax>
+			<ymax>490</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,25 @@
+<annotation>
+	<folder>JPEGImages</folder>
+	<filename>002072.jpg</filename>
+	<path>VOC2007/JPEGImages/002072.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>passenger ship</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>863</xmin>
+			<ymin>610</ymin>
+			<xmax>1014</xmax>
+			<ymax>677</ymax>
+		</bndbox>
+	</object>
+</annotation>

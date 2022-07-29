@@ -1,0 +1,36 @@
+<annotation>
+	<folder>fishing</folder>
+	<filename>002540.jpg</filename>
+	<path>F:\VOC2007\7000(train2)\fishing\002540.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>passenger ship</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>1280</xmin>
+			<ymin>369</ymin>
+			<xmax>1810</xmax>
+			<ymax>539</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>bulk cargo carrier</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<bndbox>
+			<xmin>1</xmin>
+			<ymin>235</ymin>
+			<xmax>1835</xmax>
+			<ymax>507</ymax>
+		</bndbox>
+	</object>
+</annotation>

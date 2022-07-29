@@ -1,0 +1,26 @@
+<annotation>
+	<folder>images</folder>
+	<filename>1655630885309.jpg</filename>
+	<path>D:\无人船\船模型\images\1655630885309.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>4624</width>
+		<height>2600</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>boat</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>1267</xmin>
+			<ymin>600</ymin>
+			<xmax>3310</xmax>
+			<ymax>2403</ymax>
+		</bndbox>
+	</object>
+</annotation>

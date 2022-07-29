@@ -1,0 +1,25 @@
+<annotation>
+	<folder>fishing</folder>
+	<filename>006972.jpg</filename>
+	<path>F:\VOC2007\7000(train2)\fishing\006972.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>passenger ship</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<bndbox>
+			<xmin>875</xmin>
+			<ymin>437</ymin>
+			<xmax>1012</xmax>
+			<ymax>523</ymax>
+		</bndbox>
+	</object>
+</annotation>

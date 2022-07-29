@@ -1,0 +1,26 @@
+<annotation>
+	<folder>images</folder>
+	<filename>100.JPG</filename>
+	<path>D:\doll\images\100.JPG</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>800</width>
+		<height>800</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>doll</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>67</xmin>
+			<ymin>123</ymin>
+			<xmax>750</xmax>
+			<ymax>736</ymax>
+		</bndbox>
+	</object>
+</annotation>

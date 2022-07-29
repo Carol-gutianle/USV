@@ -1,0 +1,25 @@
+<annotation>
+	<folder>1</folder>
+	<filename>001954.jpg</filename>
+	<path>VOC2007/JPEGImages/001954.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1080</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>general cargo ship</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<bndbox>
+			<xmin>615</xmin>
+			<ymin>202</ymin>
+			<xmax>1920</xmax>
+			<ymax>484</ymax>
+		</bndbox>
+	</object>
+</annotation>

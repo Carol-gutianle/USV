@@ -1,0 +1,26 @@
+<annotation>
+	<folder>images</folder>
+	<filename>487.jpg</filename>
+	<path>D:\doll\images\487.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>800</width>
+		<height>800</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>doll</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>176</xmin>
+			<ymin>27</ymin>
+			<xmax>592</xmax>
+			<ymax>771</ymax>
+		</bndbox>
+	</object>
+</annotation>
