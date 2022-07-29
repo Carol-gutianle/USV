@@ -28,7 +28,7 @@ class Camera(BaseCamera):
         #define Conifig
         counter = 0
         frequency = 10
-        cateDict = {'ore carrier':[0,0],'general cargo ship':[0,0],'bulk cargo carrier':[0,0],'container ship':[0,0],'fishing boat':[0,0],'passenger ship':[0,0],'doll':[0,0]}
+        cateDict = {'ore carrier':[0,0],'general cargo ship':[0,0],'bulk cargo carrier':[0,0],'container ship':[0,0],'fishing boat':[0,0],'passenger ship':[0,0],'doll':[0,0],'boat':[0,0]}
         out, weights, imgsz = \
         'inference/output', 'runs/exp15/weights/best.pt', 640
         source = 'ship.mp4'
@@ -64,8 +64,8 @@ class Camera(BaseCamera):
 
         # Set Dataloader
         vid_path, vid_writer = None, None
-        # dataset = LoadImages(source, img_size=imgsz)
-        dataset = LoadWebcam(0)
+        dataset = LoadImages(source, img_size=imgsz)
+        #dataset = LoadWebcam(0)
         #dataset = LoadStreams(source, img_size=imgsz)
         names = model.names if hasattr(model, 'names') else model.modules.names
         colors = [[random.randint(0, 255) for _ in range(3)] for _ in range(len(names))]

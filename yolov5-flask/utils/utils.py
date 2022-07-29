@@ -848,7 +848,7 @@ def plot_one_box(x, img, color=None, label=None, line_thickness=None):
 	c1, c2 = (int(x[0]), int(x[1])), (int(x[2]), int(x[3]))
 
 	#filter classes below
-	listDet = ['ore','general','bulk','container','fishing','passenger','doll']
+	listDet = ['ore','general','bulk','container','fishing','passenger','doll','boat']
 	#print('curr : ' + str(label))
 
 	label1 = label.split(' ')
